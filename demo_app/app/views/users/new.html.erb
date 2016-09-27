@@ -1,30 +1,36 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-     <%= form_for(@user, url: signup_path) do |f| %>
-      <%= render 'shared/error_messages' %>
-      
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-
-      <%= f.label :age %>
-      <%= f.number_field :age, class: 'form-control' %>
-
-      <%= f.label :sex %>
-      <%= f.text_field :sex, class: 'form-control' %>
-
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
-
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
-    <% end %>
-  </div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 well well-sm">
+            <legend><a href="http://www.jquery2dotnet.com"><i class="glyphicon glyphicon-globe"></i></a> Sign up!</legend>
+            <%= form_for(@user, url: signup_path, html: { class: "form" }) do |f| %>
+              <%= render 'shared/error_messages' %>
+                <div class="row">
+                  <div class="col-xs-6 col-md-6">
+                      <%= f.text_field :name, class: 'form-control', placeholder: "First Name", required: true, autofocus: true %>
+                  </div>
+                  <div class="col-xs-6 col-md-6">
+                      <%= f.number_field :age, class: 'form-control', placeholder: "Age", required: true, in: 16...100 %>
+                  </div>
+              </div>
+              <%= f.email_field :email, class: 'form-control', placeholder: "Your Email", required: true %>
+              <%= f.password_field :password, class: 'form-control', placeholder: "Password", required: true %>
+             <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password confirmation", required: true %>
+              <div class="row">
+                <div class="col-xs-3 col-md-3">
+                  <%= f.radio_button 'sex', 'male' %>
+                  <%= f.label :male, class: "radio-inline" %>
+                </div>
+                <div class="col-xs-3 col-md-3">
+                  <%= f.radio_button 'sex', 'female' %>
+                  <%= f.label :female, class: "radio-inline" %>
+                </div>
+              </div>
+              <br />
+              <br />
+              <%= f.submit "Sign up", class: "btn btn-lg btn-primary btn-block" %>
+            <% end %>
+        </div>
+    </div>
 </div>
