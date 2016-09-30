@@ -5,7 +5,7 @@ puts 'a) How many digits in the number.'
 
 def digits(n)
   count = n.to_s.size
-	puts "Number have #{count} digits."
+	puts "The number have #{count} digits."
 end
 
 n = gets.chomp
