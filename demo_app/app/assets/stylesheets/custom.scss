@@ -157,6 +157,10 @@ input, textarea, select, .uneditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
+.radio-inline {
+  width: 13px;
+  padding-left: 10px;
+}
 
 input {
   height: auto !important;

@@ -19,11 +19,11 @@
              <%= f.password_field :password_confirmation, class: 'form-control', placeholder: "Password confirmation", required: true %>
               <div class="row">
                 <div class="col-xs-3 col-md-3">
-                  <%= f.radio_button 'sex', 'male' %>
+                  <%= f.radio_button 'sex', 'male', class: "radio-inline"%>
                   <%= f.label :male, class: "radio-inline" %>
                 </div>
                 <div class="col-xs-3 col-md-3">
-                  <%= f.radio_button 'sex', 'female' %>
+                  <%= f.radio_button 'sex', 'female', class: "radio-inline" %>
                   <%= f.label :female, class: "radio-inline" %>
                 </div>
               </div>
