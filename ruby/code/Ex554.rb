@@ -10,7 +10,7 @@ def pyth_print(pyth_arr)
   count = pyth_arr.length / 3
   puts "The Pythagoras numbers are:"
   (1..count).each do | i |
-  	puts "a = #{pythf_arr[3*i-3]}, b = #{pyth_arr[3*i-2]}, c = #{pyth_arr[3*i-1]}"
+  	puts "a = #{pyth_arr[3*i-3]}, b = #{pyth_arr[3*i-2]}, c = #{pyth_arr[3*i-1]}"
   end
   puts "Count of Pythagoras numbers are: #{count}."
 end

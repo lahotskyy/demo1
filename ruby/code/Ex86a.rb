@@ -10,3 +10,4 @@ end
 
 n = gets.chomp
 digits(n)
+require "../taras.rb"
